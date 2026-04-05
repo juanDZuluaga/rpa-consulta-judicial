@@ -1,0 +1,20 @@
+ id |        timestamp         |       step        |  status   |      message       
+----+--------------------------+-------------------+-----------+--------------------
+  1 | undefined                | undefined         | undefined | undefined
+  2 | undefined                | undefined         | undefined | undefined
+  3 | 2026-04-03T19:07:49.637Z | HTTP Request      | success   | Consulta ejecutada
+  4 | 2026-04-03T19:08:33.971Z | Consulta Judicial | success   | Consulta ejecutada
+  5 | 2026-04-03T19:12:59.111Z | Consulta Judicial | success   | Consulta ejecutada
+  6 | 2026-04-03T19:13:49.726Z | Consulta Judicial | success   | Consulta ejecutada
+  7 | 2026-04-03T20:27:51.584Z | Consulta Judicial | success   | Consulta ejecutada
+  8 | 2026-04-03T20:28:27.735Z | Consulta Judicial | success   | Consulta ejecutada
+  9 | 2026-04-03T20:29:14.089Z | Consulta Judicial | success   | Consulta ejecutada
+ 10 | 2026-04-03T22:08:13.244Z | Consulta Judicial | success   | Consulta ejecutada
+ 11 | 2026-04-03T22:08:26.955Z | Consulta Judicial | success   | Consulta ejecutada
+ 12 | 2026-04-03T22:08:27.799Z | Consulta Judicial | success   | Consulta ejecutada
+ 13 | 2026-04-03T22:18:17.696Z | Consulta Judicial | success   | Consulta ejecutada
+ 14 | 2026-04-03T22:18:29.181Z | Consulta Judicial | success   | Consulta ejecutada
+ 15 | 2026-04-03T22:18:29.953Z | Consulta Judicial | success   | Consulta ejecutada
+ 16 | 2026-04-04T21:30:10.257Z | Consulta Judicial | success   | Consulta ejecutada
+(16 rows)
+

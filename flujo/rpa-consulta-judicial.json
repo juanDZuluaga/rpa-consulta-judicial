@@ -1,0 +1,670 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -304,
+        -208
+      ],
+      "id": "434621d2-7625-40e3-b32c-006ad0455165",
+      "name": "When clicking ‘Execute workflow’"
+    },
+    {
+      "parameters": {
+        "jsCode": "// const response = $json;\n\n// let log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request Browserless\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada correctamente\",\n//   data: response\n// };\n\n// if (!response.data) {\n//   log.status = \"error\";\n//   log.message = \"No se recibió data del browserless\";\n// }\n\n// return [{\n//   json: {\n//     log\n//   }\n// }];\n\n// const log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada\",\n// };\n\n// return [{\n//   json: {\n//     text: JSON.stringify(log, null, 2) + \"\\n\"\n//   }\n// }];\n\n// const log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada\"\n// };\n\n// return [{\n//   json: {},\n//   binary: {\n//     data: await this.helpers.prepareBinaryData(\n//       Buffer.from(JSON.stringify(log, null, 2), 'utf-8'),\n//       'log.txt',\n//       'text/plain'\n//     )\n//   }\n// }];\n\nconst log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"N/A\"\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        864,
+        -416
+      ],
+      "id": "22bf00fa-c092-4736-a4ee-ced6639509d8",
+      "name": "logs"
+    },
+    {
+      "parameters": {
+        "jsCode": "// const response = $json;\n\n// let log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request Browserless\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada correctamente\",\n//   data: response\n// };\n\n// if (!response.data) {\n//   log.status = \"error\";\n//   log.message = \"No se recibió data del browserless\";\n// }\n\n// return [{\n//   json: {\n//     log\n//   }\n// }];\n\n// const log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada\",\n// };\n\n// return [{\n//   json: {\n//     text: JSON.stringify(log, null, 2) + \"\\n\"\n//   }\n// }];\n\n// const log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada\"\n// };\n\n// return [{\n//   json: {},\n//   binary: {\n//     data: await this.helpers.prepareBinaryData(\n//       Buffer.from(JSON.stringify(log, null, 2), 'utf-8'),\n//       'log.txt',\n//       'text/plain'\n//     )\n//   }\n// }];\n\nconst log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"N/A\"\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        -80,
+        -400
+      ],
+      "id": "8fef1a16-ef88-4a97-a182-11913e983499",
+      "name": "logs1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// const response = $json;\n\n// let log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request Browserless\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada correctamente\",\n//   data: response\n// };\n\n// if (!response.data) {\n//   log.status = \"error\";\n//   log.message = \"No se recibió data del browserless\";\n// }\n\n// return [{\n//   json: {\n//     log\n//   }\n// }];\n\n// const log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada\",\n// };\n\n// return [{\n//   json: {\n//     text: JSON.stringify(log, null, 2) + \"\\n\"\n//   }\n// }];\n\n// const log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada\"\n// };\n\n// return [{\n//   json: {},\n//   binary: {\n//     data: await this.helpers.prepareBinaryData(\n//       Buffer.from(JSON.stringify(log, null, 2), 'utf-8'),\n//       'log.txt',\n//       'text/plain'\n//     )\n//   }\n// }];\n\nconst log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"N/A\"\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1568,
+        -496
+      ],
+      "id": "b29f3595-74a2-4638-a148-53c3210a5c37",
+      "name": "logs2"
+    },
+    {
+      "parameters": {
+        "content": "## Inicio de procesamiento Automatización\n\n1. Inicia una con aplicación con **Schedule Trigger** o en su defecto, **When clicking ‘Execute workflow’** en caso de error.\n2. consulta la bandeja de entrada del **gmail**.\n3. Manejo de logs en este proceso, también guardados en Postgres.",
+        "height": 736,
+        "width": 720
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -384,
+        -608
+      ],
+      "id": "3a203c5f-ff09-4c8c-9404-85eb627fd594",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "## Procesamiento de la información con scraping y ejecutador navegadores Chrome\n\n1. Procesamiento ce scriping con javaScript\n2. Consulta de la página a través de ejecutar navegadores Chrome/Chromium.\n3. Extracción del documento con scraping, manejo de descarga y empaquetado para exportar. \n3. Manejo de logs en este proceso, también guardados en Postgres.",
+        "height": 736,
+        "width": 912,
+        "color": 5
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        336,
+        -608
+      ],
+      "id": "d1114214-aa69-43fa-bd01-eddd4eef5337",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "# --------------------------------procesamiento  Automatizacion de Consulta Judicial - RPA----------------------------------------------\n",
+        "height": 112,
+        "width": 2256
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -384,
+        -768
+      ],
+      "id": "19fcf705-e620-4998-bcdc-6eb9759036cf",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "cronExpression",
+              "expression": "35 6 * * *"
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.3,
+      "position": [
+        -304,
+        -400
+      ],
+      "id": "046dd512-ea11-4952-82d6-4646f004026d",
+      "name": "Ejecución programada  6:35 AM de todos los diás"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        128,
+        -400
+      ],
+      "id": "f1482f93-40e5-4020-a8a4-afe0e40a7254",
+      "name": "SQL guardar logs de Incio",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "getAll",
+        "filters": {
+          "labelIds": [
+            "INBOX"
+          ],
+          "q": "subject:Consulta_nombre is:unread"
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        -80,
+        -208
+      ],
+      "id": "86aae4b1-913d-4aff-8ec6-60e095b7e486",
+      "name": "Captura del mensaje consulta_nombre",
+      "webhookId": "174f1066-1566-4a91-90da-ea268ff01c1a",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9kk6YJLQskh8kToY",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "sendTo": "juanprueba0511@gmail.com",
+        "subject": "error",
+        "message": "fallo in the Trigger",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        112,
+        -64
+      ],
+      "id": "99c6da49-1335-4449-af0a-818ba290357d",
+      "name": "Mensaje de ERROR: nodo extracción de nombre",
+      "webhookId": "f6e0d288-c73e-41cd-bee0-7fba3f54af53",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9kk6YJLQskh8kToY",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "/**\n * ============================================================\n * PROCESO: Consulta automatizada de procesos judiciales\n * ============================================================\n * \n * OBJETIVO:\n * Automatizar la consulta por nombre en el portal de la Rama Judicial\n * y capturar el resultado, priorizando la descarga DOC O EN SU DEFECTO en CSV directamente\n * en memoria sin necesidad de guardar archivos.\n * \n *  ENTRADA:\n * - nombre: String obtenido desde el input del flujo\n * \n * SALIDA:\n * - nombre_consultado\n * - filas_encontradas\n * - tipo de descarga (DOC | CSV)\n * - contenido CSV (si disponible)\n * - estado del proceso\n * \n * TECNOLOGÍA:\n * - Puppeteer (automatización de navegador)\n * ============================================================\n */\n\nconst nombre = $input.first().json.snippet;\n\nconst codigo = `\nmodule.exports = async ({ page }) => {\n\n  // ============================================================\n  // 1. NAVEGACIÓN AL PORTAL\n  // ============================================================\n  await page.goto(\n    'https://consultaprocesos.ramajudicial.gov.co/Procesos/NombreRazonSocial',\n    { waitUntil: 'networkidle2', timeout: 30000 }\n  );\n\n  // Espera a que cargue el grupo de opciones (radio buttons)\n  await page.waitForSelector('.v-input--radio-group', { timeout: 30000 });\n\n\n  // ============================================================\n  // 2. SELECCIÓN DE TIPO DE PERSONA\n  // ============================================================\n\n  // Selecciona el radio correspondiente (value=\"false\")\n  await page.evaluate(() => {\n    const radios = document.querySelectorAll('input[type=\"radio\"]');\n    for (const r of radios) {\n      if (r.getAttribute('value') === 'false') { \n        r.click(); \n        break; \n      }\n    }\n  });\n\n  // Abre el dropdown de tipo de persona\n  await page.evaluate(() => {\n    const inputs = document.querySelectorAll('input[readonly]');\n    if (inputs[0]) inputs[0].click();\n  });\n\n  // Selecciona \"Natural\" del menú desplegable\n  await page.waitForSelector('.v-menu__content', { visible: true, timeout: 10000 });\n  await page.evaluate(() => {\n    const items = document.querySelectorAll('.v-menu__content .v-list-item');\n    for (const item of items) {\n      if (item.textContent.includes('Natural')) { \n        item.click(); \n        break; \n      }\n    }\n  });\n\n\n  // ============================================================\n  // 3. INGRESO DEL NOMBRE A CONSULTAR\n  // ============================================================\n  const inputNombre = await page.waitForSelector(\n    'xpath///label[contains(text(),\"* Nombre(s) Apellido o Razón Social\")]/following::input[1]',\n    { timeout: 10000 }\n  );\n\n  await inputNombre.focus();\n\n  // Limpia el campo antes de escribir\n  await inputNombre.evaluate(el => el.value = '');\n\n  // Escribe el nombre recibido como entrada\n  await inputNombre.type('${nombre}');\n\n\n  // ============================================================\n  // 4. EJECUCIÓN DE LA CONSULTA\n  // ============================================================\n  await page.evaluate(() => {\n    const spans = document.querySelectorAll('button span');\n    for (const span of spans) {\n      if (span.textContent.trim() === 'Consultar') { \n        span.closest('button').click(); \n        break; \n      }\n    }\n  });\n\n  // Manejo opcional de pantalla intermedia con botón \"Volver\"\n  try {\n    await page.waitForSelector('button span', { timeout: 5000 });\n    await page.evaluate(() => {\n      const spans = document.querySelectorAll('button span');\n      for (const span of spans) {\n        if (span.textContent.trim() === 'Volver') { \n          span.closest('button').click(); \n          break; \n        }\n      }\n    });\n  } catch(e) {}\n\n\n  // ============================================================\n  // 5. PROCESAMIENTO DE RESULTADOS\n  // ============================================================\n  await page.waitForSelector('table tbody tr', { timeout: 30000 });\n\n  const resultado = await page.evaluate(() => {\n    const filas = document.querySelectorAll('table tbody tr');\n\n    // Validación de resultados mínimos\n    if (filas.length < 6) {\n      return { error: 'No hay suficientes filas', filas: filas.length };\n    }\n\n    // Selecciona el botón de la fila 6\n    const boton = filas[5].querySelector('td:nth-child(2) button');\n\n    if (boton) { \n      boton.click(); \n      return { ok: true, filas: filas.length }; \n    }\n\n    return { error: 'Botón no encontrado' };\n  });\n\n  // Si ocurre error, retornar inmediatamente\n  if (resultado.error) return { data: resultado };\n\n  await new Promise(r => setTimeout(r, 2000));\n\n\n  // ============================================================\n  // 6. INTERCEPCIÓN DE DESCARGA (CSV EN MEMORIA)\n  // ============================================================\n  let csvContenido = null;\n\n  await page.setRequestInterception(true);\n\n  // Permitir todas las solicitudes\n  page.on('request', req => req.continue());\n\n  // Capturar respuestas que contengan CSV\n  page.on('response', async response => {\n    const url = response.url();\n\n    if (\n      url.includes('csv') || \n      url.includes('CSV') || \n      url.includes('export') || \n      url.includes('download')\n    ) {\n      try {\n        csvContenido = await response.text();\n      } catch(e) {}\n    }\n  });\n\n\n  // ============================================================\n  // 7. INTENTO DE DESCARGA (DOC → CSV)\n  // ============================================================\n\n  // Intentar descargar DOC primero\n  const docClickado = await page.evaluate(() => {\n    const spans = document.querySelectorAll('span');\n    for (const span of spans) {\n      if (span.textContent.trim() === 'DOC') {\n        const boton = span.closest('button');\n        if (boton) { \n          boton.click(); \n          return true; \n        }\n      }\n    }\n    return false;\n  });\n\n  let descarga = 'DOC';\n\n  if (docClickado) {\n    await new Promise(r => setTimeout(r, 2000));\n\n    // Validar si el DOC no está disponible\n    try {\n      const modalTexto = await page.$eval('.v-dialog--active', el => el.textContent.toLowerCase());\n\n      if (modalTexto.includes('no está disponible')) {\n\n        // Cerrar modal\n        await page.evaluate(() => {\n          const spans = document.querySelectorAll('.v-dialog--active span');\n          for (const span of spans) {\n            if (span.textContent.trim() === 'Volver') { \n              span.closest('button').click(); \n              break; \n            }\n          }\n        });\n\n        await page.waitForSelector('.v-dialog--active', { hidden: true, timeout: 10000 });\n\n        // Fallback a CSV\n        descarga = 'CSV';\n      }\n    } catch(e) {}\n\n  } else {\n    descarga = 'CSV';\n  }\n\n\n  // ============================================================\n  // 8. DESCARGA Y CAPTURA DE CSV\n  // ============================================================\n  if (descarga === 'CSV') {\n\n    // Reintenta hasta 3 veces encontrar el botón\n    for (let i = 0; i < 3; i++) {\n\n      const csvOk = await page.evaluate(() => {\n        const spans = document.querySelectorAll('span');\n\n        for (const span of spans) {\n          if (span.textContent.trim() === 'Descargar CSV') {\n            const boton = span.closest('button');\n\n            // Validar que el botón esté visible\n            if (boton && boton.offsetParent !== null) { \n              boton.click(); \n              return true; \n            }\n          }\n        }\n        return false;\n      });\n\n      if (csvOk) { \n        await new Promise(r => setTimeout(r, 3000));\n        break; \n      }\n\n      await new Promise(r => setTimeout(r, 2000));\n    }\n  }\n\n\n  // ============================================================\n  // 9. RESPUESTA FINAL\n  // ============================================================\n  return {\n    data: {\n      nombre_consultado: '${nombre}',\n      filas_encontradas: resultado.filas,\n      descarga: descarga,\n      csvContenido: csvContenido || 'No se pudo capturar el contenido',\n      status: 'completado'\n    }\n  };\n};\n`;\n\nreturn [{\n  json: {\n    code: codigo,\n    context: {}\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        368,
+        -224
+      ],
+      "id": "39e85e96-1a69-40fe-9b66-ac9d6b05aeaf",
+      "name": "JS Scraping",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://browserless:3000/function",
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "code",
+              "value": "={{ $json.code }}"
+            },
+            {
+              "name": "context",
+              "value": "={{ $json.context }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        592,
+        -400
+      ],
+      "id": "944b8543-1d28-415b-944f-f892ce00692d",
+      "name": "Headless Browser Runner",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "sendTo": "juanprueba0511@gmail.com",
+        "subject": "error",
+        "message": "fallo en el scrapyn del Usuario",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        608,
+        -64
+      ],
+      "id": "cbb30fa6-27dc-442d-ae97-700d52bea715",
+      "name": "Mensaje ERROR: Ejecución de scraping",
+      "webhookId": "f6e0d288-c73e-41cd-bee0-7fba3f54af53",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9kk6YJLQskh8kToY",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        1040,
+        -416
+      ],
+      "id": "e865aad5-11d6-42b7-816c-40c09b8e6d88",
+      "name": "SQL logs del proceso de scraping",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const data = JSON.parse($input.first().json.data);\n\n// Detectar tipo de archivo (puedes ajustar esto según tu input)\nconst tipo = data.tipo || 'csv';\n\nlet buffer;\nlet fileName;\nlet mimeType;\n\n// ============================================================\n// CSV\n// ============================================================\nif (tipo === 'csv') {\n  const csvLimpio = data.csvContenido.replace(/\\u0000/g, '');\n\n  fileName = `procesos_${data.nombre_consultado.replace(/ /g, '_')}.csv`;\n  buffer = Buffer.from(csvLimpio, 'utf-8');\n  mimeType = 'text/csv';\n}\n\n// ============================================================\n// DOC / DOCX\n// ============================================================\nelse if (tipo === 'doc' || tipo === 'docx') {\n  // Aquí asumimos que viene en base64\n  buffer = Buffer.from(data.fileBase64, 'base64');\n\n  const extension = tipo === 'doc' ? 'doc' : 'docx';\n  fileName = `procesos_${data.nombre_consultado.replace(/ /g, '_')}.${extension}`;\n\n  mimeType = tipo === 'doc'\n    ? 'application/msword'\n    : 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';\n}\n\n// ============================================================\n// PREPARAR BINARIO\n// ============================================================\nconst binaryData = await this.helpers.prepareBinaryData(\n  buffer,\n  fileName,\n  mimeType\n);\n\nreturn [{\n  json: {\n    nombre: data.nombre_consultado,\n    fileName\n  },\n  binary: {\n    attachment: binaryData\n  }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        864,
+        -224
+      ],
+      "id": "e358a69b-b24d-4f05-998f-764233c95ff1",
+      "name": "Generar archivo CSV limpio o DOC segun el caso",
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "sendTo": "juanprueba0511@gmail.com",
+        "subject": "ERROR of integration ",
+        "message": "❌ Chrome/Chromiun in the node  headless",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        864,
+        -64
+      ],
+      "id": "83f2e8b9-c164-43bf-8cd2-2b3b449c4916",
+      "name": "Mensaje ERROR Gmial: Headless Browser Runner",
+      "webhookId": "f6e0d288-c73e-41cd-bee0-7fba3f54af53",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9kk6YJLQskh8kToY",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "## Proceso final  entregra de la solicitud\n\n1. entregra al correo  el documento solcitdo\n2. manejo por última vez los logs del procesos final",
+        "height": 736,
+        "width": 640,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        1248,
+        -608
+      ],
+      "id": "638df699-1bcd-4a97-b1c4-958872cb3553",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "sendTo": "juanprueba0511@gmail.com",
+        "subject": "ERROR  of Document",
+        "message": "❌ error in the node of document download",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1088,
+        -144
+      ],
+      "id": "95ca29bf-720a-4659-b712-c3bfcdc717d7",
+      "name": "Mens. ERROR Gmial: generacion del CSV  o DOC",
+      "webhookId": "f6e0d288-c73e-41cd-bee0-7fba3f54af53",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9kk6YJLQskh8kToY",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "juanprueba0511@gmail.com",
+        "subject": "=Procesos judiciales - {{ $json.nombre }}  ({{ $json.fileName }})",
+        "message": "=Adjunto encontrarás los procesos judiciales de {{ $json.nombre }}",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {
+                "property": "attachment"
+              }
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1360,
+        -416
+      ],
+      "id": "fbe1b75c-8dba-44e0-8ff7-85beea3934d2",
+      "name": "Mens. Gmail: del arcivo PRUBA",
+      "webhookId": "10b0782c-9ef3-493c-8d10-428833270be2",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9kk6YJLQskh8kToY",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "sendTo": "jhrey@tcc.com.co",
+        "subject": "ERROR Desaing file",
+        "message": "❌ This file could not be loaded properly.",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1360,
+        -128
+      ],
+      "id": "ccacc843-ae52-4dee-83d5-d84f5e02baf7",
+      "name": "Mens. Gmail: del arcivo PRUBA TCC",
+      "webhookId": "e7b6d489-d9b2-4e55-a1c4-c46f49a3b71e",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9kk6YJLQskh8kToY",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "sendTo": "juanprueba0511@gmail.com",
+        "subject": "ERROR  of Document",
+        "message": "❌ error in the node of document download",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1568,
+        -336
+      ],
+      "id": "1c89898e-814a-4527-acd6-d20ca9330edc",
+      "name": "Mens. ERROR Gmial: envio Doc. al gmail",
+      "webhookId": "f6e0d288-c73e-41cd-bee0-7fba3f54af53",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9kk6YJLQskh8kToY",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sendTo": "juanprueba0511@gmail.com",
+        "subject": "ERROR  of Document",
+        "message": "❌ error in the node of document download",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        1568,
+        -48
+      ],
+      "id": "ee34c814-c527-4368-aaad-c28a7263a5e2",
+      "name": "Mens. ERROR Gmial: envio Doc. al gmail1",
+      "webhookId": "f6e0d288-c73e-41cd-bee0-7fba3f54af53",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9kk6YJLQskh8kToY",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        1728,
+        -496
+      ],
+      "id": "ce8aa692-0b41-429d-bfed-2a0e4781203d",
+      "name": "SQL logs del proceso salida del documeto al gmail",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "When clicking ‘Execute workflow’": {
+      "main": [
+        [
+          {
+            "node": "Captura del mensaje consulta_nombre",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "logs1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs": {
+      "main": [
+        [
+          {
+            "node": "SQL logs del proceso de scraping",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs1": {
+      "main": [
+        [
+          {
+            "node": "SQL guardar logs de Incio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs2": {
+      "main": [
+        [
+          {
+            "node": "SQL logs del proceso salida del documeto al gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Ejecución programada  6:35 AM de todos los diás": {
+      "main": [
+        [
+          {
+            "node": "logs1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Captura del mensaje consulta_nombre",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Captura del mensaje consulta_nombre": {
+      "main": [
+        [
+          {
+            "node": "JS Scraping",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mensaje de ERROR: nodo extracción de nombre",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "JS Scraping": {
+      "main": [
+        [
+          {
+            "node": "Headless Browser Runner",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mensaje ERROR: Ejecución de scraping",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Headless Browser Runner": {
+      "main": [
+        [
+          {
+            "node": "logs",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Generar archivo CSV limpio o DOC segun el caso",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mensaje ERROR Gmial: Headless Browser Runner",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "SQL logs del proceso de scraping": {
+      "main": [
+        []
+      ]
+    },
+    "Generar archivo CSV limpio o DOC segun el caso": {
+      "main": [
+        [
+          {
+            "node": "Mens. Gmail: del arcivo PRUBA",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mens. ERROR Gmial: generacion del CSV  o DOC",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mens. Gmail: del arcivo PRUBA": {
+      "main": [
+        [
+          {
+            "node": "logs2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mens. ERROR Gmial: envio Doc. al gmail",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mens. Gmail: del arcivo PRUBA TCC": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Mens. ERROR Gmial: envio Doc. al gmail1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "5da5896b-7f9a-48a3-a674-93518a83b056",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "ffda0daa83fa6967b47e989b38cc1cf3f2e3cec3f1b4e7655be7d05155bf5843"
+  },
+  "id": "U6zT0xFw7URyU9Aa",
+  "tags": []
+}
