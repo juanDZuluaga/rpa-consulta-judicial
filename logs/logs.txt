@@ -16,5 +16,63 @@
  14 | 2026-04-03T22:18:29.181Z | Consulta Judicial | success   | Consulta ejecutada
  15 | 2026-04-03T22:18:29.953Z | Consulta Judicial | success   | Consulta ejecutada
  16 | 2026-04-04T21:30:10.257Z | Consulta Judicial | success   | Consulta ejecutada
-(16 rows)
+ 17 | 2026-04-05T17:21:58.548Z | Consulta Judicial | success   | Consulta ejecutada
+ 18 | 2026-04-05T17:22:11.980Z | Consulta Judicial | success   | Consulta ejecutada
+ 19 | 2026-04-05T17:22:12.917Z | Consulta Judicial | success   | Consulta ejecutada
+ 20 | 2026-04-05T17:49:27.515Z | Consulta Judicial | success   | Consulta ejecutada
+ 21 | 2026-04-05T17:49:38.392Z | Consulta Judicial | success   | Consulta ejecutada
+ 22 | 2026-04-05T17:49:39.225Z | Consulta Judicial | success   | Consulta ejecutada
+ 23 | 2026-04-05T17:51:27.856Z | Consulta Judicial | success   | Consulta ejecutada
+ 24 | 2026-04-05T17:51:38.550Z | Consulta Judicial | success   | Consulta ejecutada
+ 25 | 2026-04-05T17:51:39.644Z | Consulta Judicial | success   | Consulta ejecutada
+ 26 | 2026-04-05T17:52:37.519Z | Consulta Judicial | success   | Consulta ejecutada
+ 27 | 2026-04-05T17:52:48.786Z | Consulta Judicial | success   | Consulta ejecutada
+ 28 | 2026-04-05T17:52:49.640Z | Consulta Judicial | success   | Consulta ejecutada
+ 29 | 2026-04-05T18:32:54.806Z | Consulta Judicial | success   | Consulta ejecutada
+ 30 | 2026-04-05T18:33:05.271Z | Consulta Judicial | success   | Consulta ejecutada
+ 31 | 2026-04-05T18:33:06.304Z | Consulta Judicial | success   | Consulta ejecutada
+ 32 | 2026-04-05T22:11:42.148Z | Consulta Judicial | success   | Consulta ejecutada
+ 33 | 2026-04-05T22:11:52.845Z | Consulta Judicial | success   | Consulta ejecutada
+ 34 | 2026-04-05T22:11:57.231Z | Consulta Judicial | success   | Consulta ejecutada
+ 35 | 2026-04-05T22:21:13.198Z | Consulta Judicial | success   | Consulta ejecutada
+ 36 | 2026-04-05T22:21:25.995Z | Consulta Judicial | success   | Consulta ejecutada
+ 37 | 2026-04-05T22:21:36.725Z | Consulta Judicial | success   | Consulta ejecutada
+ 38 | 2026-04-05T22:26:04.010Z | Consulta Judicial | success   | Consulta ejecutada
+ 39 | 2026-04-05T22:26:16.610Z | Consulta Judicial | success   | Consulta ejecutada
+ 40 | 2026-04-05T22:29:28.241Z | Consulta Judicial | success   | Consulta ejecutada
+ 41 | 2026-04-05T22:29:39.196Z | Consulta Judicial | success   | Consulta ejecutada
+ 42 | 2026-04-05T22:32:14.126Z | Consulta Judicial | success   | Consulta ejecutada
+ 43 | 2026-04-05T22:32:24.808Z | Consulta Judicial | success   | Consulta ejecutada
+ 44 | 2026-04-05T22:32:26.594Z | Consulta Judicial | success   | Consulta ejecutada
+ 45 | 2026-04-05T22:34:36.438Z | Consulta Judicial | success   | Consulta ejecutada
+ 46 | 2026-04-05T22:34:49.035Z | Consulta Judicial | success   | Consulta ejecutada
+ 47 | 2026-04-05T22:34:51.218Z | Consulta Judicial | success   | Consulta ejecutada
+ 48 | 2026-04-05T23:09:54.161Z | Consulta Judicial | success   | Consulta ejecutada
+ 49 | 2026-04-05T23:10:06.441Z | Consulta Judicial | success   | Consulta ejecutada
+ 50 | 2026-04-05T23:10:50.768Z | Consulta Judicial | success   | Consulta ejecutada
+ 51 | 2026-04-05T23:11:02.364Z | Consulta Judicial | success   | Consulta ejecutada
+ 52 | 2026-04-05T23:12:15.474Z | Consulta Judicial | success   | Consulta ejecutada
+ 53 | 2026-04-05T23:12:26.168Z | Consulta Judicial | success   | Consulta ejecutada
+ 54 | 2026-04-05T23:12:27.085Z | Consulta Judicial | success   | Consulta ejecutada
+ 55 | 2026-04-05T23:31:39.575Z | Consulta Judicial | success   | Consulta ejecutada
+ 56 | 2026-04-05T23:31:49.968Z | Consulta Judicial | success   | Consulta ejecutada
+ 57 | 2026-04-05T23:31:51.001Z | Consulta Judicial | success   | Consulta ejecutada
+ 58 | 2026-04-05T23:34:38.882Z | Consulta Judicial | success   | Consulta ejecutada
+ 59 | 2026-04-05T23:34:50.075Z | Consulta Judicial | success   | Consulta ejecutada
+ 60 | 2026-04-05T23:34:51.025Z | Consulta Judicial | success   | Consulta ejecutada
+ 61 | 2026-04-05T23:35:22.082Z | Consulta Judicial | success   | Consulta ejecutada
+ 62 | 2026-04-05T23:35:32.575Z | Consulta Judicial | success   | Consulta ejecutada
+ 63 | 2026-04-05T23:35:33.491Z | Consulta Judicial | success   | Consulta ejecutada
+ 64 | 2026-04-05T23:41:08.832Z | Consulta Judicial | success   | Consulta ejecutada
+ 65 | 2026-04-05T23:41:19.276Z | Consulta Judicial | success   | Consulta ejecutada
+ 66 | 2026-04-05T23:43:00.460Z | Consulta Judicial | success   | Consulta ejecutada
+ 67 | 2026-04-05T23:43:15.131Z | Consulta Judicial | success   | Consulta ejecutada
+ 68 | 2026-04-05T23:43:16.038Z | Consulta Judicial | success   | Consulta ejecutada
+ 69 | 2026-04-05T23:47:47.255Z | Consulta Judicial | success   | Consulta ejecutada
+ 70 | 2026-04-05T23:48:05.042Z | Consulta Judicial | success   | Consulta ejecutada
+ 71 | 2026-04-05T23:48:06.022Z | Consulta Judicial | success   | Consulta ejecutada
+ 72 | 2026-04-06T00:03:01.965Z | Consulta Judicial | success   | Consulta ejecutada
+ 73 | 2026-04-06T00:03:11.325Z | Consulta Judicial | success   | Consulta ejecutada
+ 74 | 2026-04-06T00:03:12.213Z | Consulta Judicial | success   | Consulta ejecutada
+(74 rows)
 
