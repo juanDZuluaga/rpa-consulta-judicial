@@ -14,7 +14,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// const response = $json;\n\n// let log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request Browserless\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada correctamente\",\n//   data: response\n// };\n\n// if (!response.data) {\n//   log.status = \"error\";\n//   log.message = \"No se recibió data del browserless\";\n// }\n\n// return [{\n//   json: {\n//     log\n//   }\n// }];\n\n// const log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada\",\n// };\n\n// return [{\n//   json: {\n//     text: JSON.stringify(log, null, 2) + \"\\n\"\n//   }\n// }];\n\n// const log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada\"\n// };\n\n// return [{\n//   json: {},\n//   binary: {\n//     data: await this.helpers.prepareBinaryData(\n//       Buffer.from(JSON.stringify(log, null, 2), 'utf-8'),\n//       'log.txt',\n//       'text/plain'\n//     )\n//   }\n// }];\n\nconst log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"N/A\"\n};\n\nreturn [{\n  json: { log }\n}];\n"
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"N/A\"\n};\n\nreturn [{\n  json: { log }\n}];\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -27,7 +27,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// const response = $json;\n\n// let log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request Browserless\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada correctamente\",\n//   data: response\n// };\n\n// if (!response.data) {\n//   log.status = \"error\";\n//   log.message = \"No se recibió data del browserless\";\n// }\n\n// return [{\n//   json: {\n//     log\n//   }\n// }];\n\n// const log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada\",\n// };\n\n// return [{\n//   json: {\n//     text: JSON.stringify(log, null, 2) + \"\\n\"\n//   }\n// }];\n\n// const log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada\"\n// };\n\n// return [{\n//   json: {},\n//   binary: {\n//     data: await this.helpers.prepareBinaryData(\n//       Buffer.from(JSON.stringify(log, null, 2), 'utf-8'),\n//       'log.txt',\n//       'text/plain'\n//     )\n//   }\n// }];\n\nconst log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"N/A\"\n};\n\nreturn [{\n  json: { log }\n}];\n"
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"N/A\"\n};\n\nreturn [{\n  json: { log }\n}];\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -40,7 +40,7 @@
     },
     {
       "parameters": {
-        "jsCode": "// const response = $json;\n\n// let log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request Browserless\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada correctamente\",\n//   data: response\n// };\n\n// if (!response.data) {\n//   log.status = \"error\";\n//   log.message = \"No se recibió data del browserless\";\n// }\n\n// return [{\n//   json: {\n//     log\n//   }\n// }];\n\n// const log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada\",\n// };\n\n// return [{\n//   json: {\n//     text: JSON.stringify(log, null, 2) + \"\\n\"\n//   }\n// }];\n\n// const log = {\n//   timestamp: new Date().toISOString(),\n//   step: \"HTTP Request\",\n//   status: \"success\",\n//   message: \"Consulta ejecutada\"\n// };\n\n// return [{\n//   json: {},\n//   binary: {\n//     data: await this.helpers.prepareBinaryData(\n//       Buffer.from(JSON.stringify(log, null, 2), 'utf-8'),\n//       'log.txt',\n//       'text/plain'\n//     )\n//   }\n// }];\n\nconst log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"N/A\"\n};\n\nreturn [{\n  json: { log }\n}];\n"
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"N/A\"\n};\n\nreturn [{\n  json: { log }\n}];\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
@@ -277,43 +277,6 @@
     },
     {
       "parameters": {
-        "jsCode": "const data = JSON.parse($input.first().json.data);\n\n// Detectar tipo de archivo (puedes ajustar esto según tu input)\nconst tipo = data.tipo || 'csv';\n\nlet buffer;\nlet fileName;\nlet mimeType;\n\n// ============================================================\n// CSV\n// ============================================================\nif (tipo === 'csv') {\n  const csvLimpio = data.csvContenido.replace(/\\u0000/g, '');\n\n  fileName = `procesos_${data.nombre_consultado.replace(/ /g, '_')}.csv`;\n  buffer = Buffer.from(csvLimpio, 'utf-8');\n  mimeType = 'text/csv';\n}\n\n// ============================================================\n// DOC / DOCX\n// ============================================================\nelse if (tipo === 'doc' || tipo === 'docx') {\n  // Aquí asumimos que viene en base64\n  buffer = Buffer.from(data.fileBase64, 'base64');\n\n  const extension = tipo === 'doc' ? 'doc' : 'docx';\n  fileName = `procesos_${data.nombre_consultado.replace(/ /g, '_')}.${extension}`;\n\n  mimeType = tipo === 'doc'\n    ? 'application/msword'\n    : 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';\n}\n\n// ============================================================\n// PREPARAR BINARIO\n// ============================================================\nconst binaryData = await this.helpers.prepareBinaryData(\n  buffer,\n  fileName,\n  mimeType\n);\n\nreturn [{\n  json: {\n    nombre: data.nombre_consultado,\n    fileName\n  },\n  binary: {\n    attachment: binaryData\n  }\n}];\n"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        864,
-        -224
-      ],
-      "id": "e358a69b-b24d-4f05-998f-764233c95ff1",
-      "name": "Generar archivo CSV limpio o DOC segun el caso",
-      "onError": "continueErrorOutput"
-    },
-    {
-      "parameters": {
-        "sendTo": "juanprueba0511@gmail.com",
-        "subject": "ERROR of integration ",
-        "message": "❌ Chrome/Chromiun in the node  headless",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.gmail",
-      "typeVersion": 2.2,
-      "position": [
-        864,
-        -64
-      ],
-      "id": "83f2e8b9-c164-43bf-8cd2-2b3b449c4916",
-      "name": "Mensaje ERROR Gmial: Headless Browser Runner",
-      "webhookId": "f6e0d288-c73e-41cd-bee0-7fba3f54af53",
-      "credentials": {
-        "gmailOAuth2": {
-          "id": "9kk6YJLQskh8kToY",
-          "name": "Gmail account"
-        }
-      }
-    },
-    {
-      "parameters": {
         "content": "## Proceso final  entregra de la solicitud\n\n1. entregra al correo  el documento solcitdo\n2. manejo por última vez los logs del procesos final",
         "height": 736,
         "width": 640,
@@ -354,7 +317,7 @@
     {
       "parameters": {
         "sendTo": "juanprueba0511@gmail.com",
-        "subject": "=Procesos judiciales - {{ $json.nombre }}  ({{ $json.fileName }})",
+        "subject": "=[RPA] Detalle Proceso - {{ $('Captura del mensaje consulta_nombre').item.json.snippet }} - {{ $json.fechaHora }}",
         "message": "=Adjunto encontrarás los procesos judiciales de {{ $json.nombre }}",
         "options": {
           "attachmentsUi": {
@@ -473,6 +436,43 @@
           "name": "Postgres account"
         }
       }
+    },
+    {
+      "parameters": {
+        "sendTo": "juanprueba0511@gmail.com",
+        "subject": "ERROR of integration ",
+        "message": "❌ Chrome/Chromiun in the node  headless",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        864,
+        -64
+      ],
+      "id": "83f2e8b9-c164-43bf-8cd2-2b3b449c4916",
+      "name": "Mensaje ERROR Gmial: Headless Browser Runner",
+      "webhookId": "f6e0d288-c73e-41cd-bee0-7fba3f54af53",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9kk6YJLQskh8kToY",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "/**\n * ============================================================\n * PROCESO: GENERACIÓN DE ARCHIVO FINAL\n * ============================================================\n * \n * OBJETIVO:\n * - Si llega CSV → convertir a documento Word (.doc) con formato tipo ficha\n * - Si llega DOC/DOCX → enviar archivo original sin modificar\n * \n * CARACTERÍSTICAS:\n * ✔ Manejo de CSV complejo (sep=;, comillas, formato Excel)\n * ✔ No rompe el flujo (manejo de errores)\n * ✔ Formato legible tipo informe\n * ✔ Compatible con Word sin errores\n * \n * ============================================================\n */\n\nlet buffer;\nlet fileName;\nlet mimeType;\n\n// DEFINIDA GLOBAL (ANTES DEL TRY)\nconst ahora = new Date();\n\nconst fechaHora = ahora.toLocaleString('sv-SE', {\n  timeZone: 'America/Bogota',\n}).replace(' ', '_').replace(/:/g, '-');\n\n\ntry {\n\n  // ============================================================\n  // 1. OBTENER Y PARSEAR DATOS DE ENTRADA\n  // ============================================================\n  // Puede venir como string JSON o como objeto\n  let raw = $input.first().json.data;\n\n  let data;\n  try {\n    data = typeof raw === 'string' ? JSON.parse(raw) : raw;\n  } catch (e) {\n    // fallback si el JSON viene mal formado\n    data = raw || {};\n  }\n\n  // ============================================================\n  // 2. DETECTAR TIPO DE ARCHIVO\n  // ============================================================\n  // Si hay csvContenido → es CSV\n  // Si no → se asume DOC/DOCX\n  const tipo = data.tipo || (data.csvContenido ? 'csv' : 'doc');\n\n  // ============================================================\n  // 3. GENERAR FECHA Y HORA (ZONA COLOMBIA)\n  // ============================================================\n  const ahora = new Date();\n  const fechaHora = ahora.toLocaleString('sv-SE', {\n    timeZone: 'America/Bogota',\n  }).replace(' ', '_').replace(/:/g, '-');\n\n  // ============================================================\n  // 4. PROCESAMIENTO SI ES CSV\n  // ============================================================\n  if (tipo === 'csv') {\n\n    /**\n     * PROBLEMAS QUE RESUELVE ESTE BLOQUE:\n     * - CSV con \"sep=;\" (formato Excel)\n     * - CSV con datos entre comillas\n     * - Valores tipo =\"12345\"\n     * - Líneas mal separadas\n     */\n\n    let csv = (data.csvContenido || '')\n      .replace(/\\u0000/g, '') // eliminar caracteres invisibles\n      .trim();\n\n    // normalizar saltos de línea\n    csv = csv.replace(/\\r/g, '');\n\n    // asegurar que sep=; esté separado\n    csv = csv.replace('sep=;', 'sep=;\\n');\n\n    const lineas = csv.split('\\n').filter(Boolean);\n\n    let separador = ';';\n    let startIndex = 0;\n\n    // detectar separador dinámico\n    if (lineas[0].startsWith('sep=')) {\n      separador = lineas[0].split('=')[1] || ';';\n      startIndex = 1;\n    }\n\n    // ============================================================\n    // 4.1 EXTRAER HEADERS\n    // ============================================================\n    const headers = (lineas[startIndex] || '')\n      .split(separador)\n      .map(h => h.trim())\n      .filter(Boolean);\n\n    // ============================================================\n    // 4.2 EXTRAER FILA DE DATOS\n    // ============================================================\n    const dataLinea = lineas[startIndex + 1] || '';\n\n    /**\n     * Parser personalizado:\n     * - Respeta texto entre comillas\n     * - No rompe cuando hay ; dentro del texto\n     */\n    function parseFila(fila) {\n\n      let valores = [];\n      let actual = '';\n      let dentroComillas = false;\n\n      for (let i = 0; i < fila.length; i++) {\n        const char = fila[i];\n\n        if (char === '\"') {\n          dentroComillas = !dentroComillas;\n          continue;\n        }\n\n        if (char === separador && !dentroComillas) {\n          valores.push(actual.trim());\n          actual = '';\n        } else {\n          actual += char;\n        }\n      }\n\n      valores.push(actual.trim());\n\n      // limpiar formato Excel =\"valor\"\n      return valores.map(v =>\n        v.replace(/^=/, '').trim()\n      );\n    }\n\n    const columnas = parseFila(dataLinea);\n\n    // ============================================================\n    // 4.3 GENERAR TABLA TIPO FICHA\n    // ============================================================\n    const tbody = headers.map((header, i) => `\n      <tr>\n        <td style=\"background:#2b436b;color:white;font-weight:bold;width:30%;\">\n          ${header}\n        </td>\n        <td style=\"width:70%;\">\n          ${columnas[i] || ''}\n        </td>\n      </tr>\n    `).join('');\n\n    // ============================================================\n    // 4.4 GENERAR HTML COMPATIBLE CON WORD\n    // ============================================================\n    const html = `\n    <html>\n      <head><meta charset=\"UTF-8\"></head>\n      <body style=\"font-family:Calibri; margin:25px;\">\n\n        <h2 style=\"background:#d9d9d9;padding:8px;\">Resultados de consulta</h2>\n\n        <p><b>Nombre:</b> ${data.nombre_consultado || 'N/A'}</p>\n        <p><b>Fecha de la consulta:</b> ${fechaHora}</p>\n\n        <table border=\"1\" cellspacing=\"0\" cellpadding=\"6\" style=\"width:100%;border-collapse:collapse;\">\n          ${tbody}\n        </table>\n\n      </body>\n    </html>\n    `;\n\n    buffer = Buffer.from(html, 'utf-8');\n\n    fileName = `procesos_${(data.nombre_consultado || 'sin_nombre').replace(/ /g, '_')}_${fechaHora}.doc`;\n\n    mimeType = 'application/msword';\n  }\n\n  // ============================================================\n  // 5. SI ES DOC O DOCX → SE ENVÍA ORIGINAL\n  // ============================================================\n  else {\n\n    /**\n     * No se transforma el archivo\n     * Solo se reconstruye desde base64\n     */\n    buffer = Buffer.from(data.fileBase64 || '', 'base64');\n\n    const extension = tipo === 'docx' ? 'docx' : 'doc';\n\n    fileName = `procesos_${(data.nombre_consultado || 'sin_nombre').replace(/ /g, '_')}_${fechaHora}.${extension}`;\n\n    mimeType = tipo === 'docx'\n      ? 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'\n      : 'application/msword';\n  }\n\n} catch (error) {\n\n  // ============================================================\n  // 6. MANEJO DE ERRORES (NO ROMPE FLUJO)\n  // ============================================================\n  const htmlError = `\n  <html>\n    <body>\n      <h2>Error en procesamiento</h2>\n      <pre>${error.message}</pre>\n    </body>\n  </html>\n  `;\n\n  buffer = Buffer.from(htmlError, 'utf-8');\n  fileName = `error.doc`;\n  mimeType = 'application/msword';\n}\n\n// ============================================================\n// 7. PREPARAR ARCHIVO BINARIO PARA SALIDA\n// ============================================================\nconst binaryData = await this.helpers.prepareBinaryData(\n  buffer,\n  fileName,\n  mimeType\n);\n\n// ============================================================\n// 8. RESPUESTA FINAL\n// ============================================================\nreturn [{\n  json: {\n    fileName,\n    fechaHora\n  },\n  binary: {\n    attachment: binaryData\n  }\n}];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        864,
+        -224
+      ],
+      "id": "e358a69b-b24d-4f05-998f-764233c95ff1",
+      "name": "Tranformar  docuento Binario  si CSV  a doc con HTML o si viene DOC mandarlo",
+      "onError": "continueErrorOutput"
     }
   ],
   "pinData": {},
@@ -530,12 +530,12 @@
       "main": [
         [
           {
-            "node": "logs1",
+            "node": "Captura del mensaje consulta_nombre",
             "type": "main",
             "index": 0
           },
           {
-            "node": "Captura del mensaje consulta_nombre",
+            "node": "logs1",
             "type": "main",
             "index": 0
           }
@@ -582,12 +582,12 @@
       "main": [
         [
           {
-            "node": "logs",
+            "node": "Tranformar  docuento Binario  si CSV  a doc con HTML o si viene DOC mandarlo",
             "type": "main",
             "index": 0
           },
           {
-            "node": "Generar archivo CSV limpio o DOC segun el caso",
+            "node": "logs",
             "type": "main",
             "index": 0
           }
@@ -604,24 +604,6 @@
     "SQL logs del proceso de scraping": {
       "main": [
         []
-      ]
-    },
-    "Generar archivo CSV limpio o DOC segun el caso": {
-      "main": [
-        [
-          {
-            "node": "Mens. Gmail: del arcivo PRUBA",
-            "type": "main",
-            "index": 0
-          }
-        ],
-        [
-          {
-            "node": "Mens. ERROR Gmial: generacion del CSV  o DOC",
-            "type": "main",
-            "index": 0
-          }
-        ]
       ]
     },
     "Mens. Gmail: del arcivo PRUBA": {
@@ -653,6 +635,24 @@
           }
         ]
       ]
+    },
+    "Tranformar  docuento Binario  si CSV  a doc con HTML o si viene DOC mandarlo": {
+      "main": [
+        [
+          {
+            "node": "Mens. Gmail: del arcivo PRUBA",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mens. ERROR Gmial: generacion del CSV  o DOC",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "active": false,
@@ -660,7 +660,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "5da5896b-7f9a-48a3-a674-93518a83b056",
+  "versionId": "2288156e-e9fe-4a2f-803e-999eaa7e6585",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "ffda0daa83fa6967b47e989b38cc1cf3f2e3cec3f1b4e7655be7d05155bf5843"
