@@ -6,62 +6,36 @@
       "type": "n8n-nodes-base.manualTrigger",
       "typeVersion": 1,
       "position": [
-        -304,
-        -208
+        -432,
+        48
       ],
       "id": "434621d2-7625-40e3-b32c-006ad0455165",
       "name": "When clicking ‘Execute workflow’"
     },
     {
       "parameters": {
-        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"N/A\"\n};\n\nreturn [{\n  json: { log }\n}];\n"
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"NODO DE INICIO PROCESAMIENTO INICIAL DEL GMAIL Y TIGGER\",\n  error_stack: $json.error?.stack || null\n};\n\nreturn [{\n  json: { log }\n}];\n"
       },
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        864,
-        -416
-      ],
-      "id": "22bf00fa-c092-4736-a4ee-ced6639509d8",
-      "name": "logs"
-    },
-    {
-      "parameters": {
-        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"N/A\"\n};\n\nreturn [{\n  json: { log }\n}];\n"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        -80,
-        -400
+        16,
+        -16
       ],
       "id": "8fef1a16-ef88-4a97-a182-11913e983499",
       "name": "logs1"
     },
     {
       "parameters": {
-        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"N/A\"\n};\n\nreturn [{\n  json: { log }\n}];\n"
-      },
-      "type": "n8n-nodes-base.code",
-      "typeVersion": 2,
-      "position": [
-        1568,
-        -496
-      ],
-      "id": "b29f3595-74a2-4638-a148-53c3210a5c37",
-      "name": "logs2"
-    },
-    {
-      "parameters": {
         "content": "## Inicio de procesamiento Automatización\n\n1. Inicia una con aplicación con **Schedule Trigger** o en su defecto, **When clicking ‘Execute workflow’** en caso de error.\n2. consulta la bandeja de entrada del **gmail**.\n3. Manejo de logs en este proceso, también guardados en Postgres.",
-        "height": 736,
-        "width": 720
+        "height": 1184,
+        "width": 848
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -384,
-        -608
+        -512,
+        -592
       ],
       "id": "3a203c5f-ff09-4c8c-9404-85eb627fd594",
       "name": "Sticky Note"
@@ -69,15 +43,15 @@
     {
       "parameters": {
         "content": "## Procesamiento de la información con scraping y ejecutador navegadores Chrome\n\n1. Procesamiento ce scriping con javaScript\n2. Consulta de la página a través de ejecutar navegadores Chrome/Chromium.\n3. Extracción del documento con scraping, manejo de descarga y empaquetado para exportar. \n3. Manejo de logs en este proceso, también guardados en Postgres.",
-        "height": 736,
-        "width": 912,
+        "height": 1184,
+        "width": 2000,
         "color": 5
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
         336,
-        -608
+        -592
       ],
       "id": "d1114214-aa69-43fa-bd01-eddd4eef5337",
       "name": "Sticky Note2"
@@ -91,8 +65,8 @@
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        -384,
-        -768
+        160,
+        -832
       ],
       "id": "19fcf705-e620-4998-bcdc-6eb9759036cf",
       "name": "Sticky Note3"
@@ -111,8 +85,8 @@
       "type": "n8n-nodes-base.scheduleTrigger",
       "typeVersion": 1.3,
       "position": [
-        -304,
-        -400
+        -448,
+        -240
       ],
       "id": "046dd512-ea11-4952-82d6-4646f004026d",
       "name": "Ejecución programada  6:35 AM de todos los diás"
@@ -126,8 +100,8 @@
       "type": "n8n-nodes-base.postgres",
       "typeVersion": 2.6,
       "position": [
-        128,
-        -400
+        192,
+        -16
       ],
       "id": "f1482f93-40e5-4020-a8a4-afe0e40a7254",
       "name": "SQL guardar logs de Incio",
@@ -151,8 +125,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        -80,
-        -208
+        -208,
+        -96
       ],
       "id": "86aae4b1-913d-4aff-8ec6-60e095b7e486",
       "name": "Captura del mensaje consulta_nombre",
@@ -175,8 +149,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        112,
-        -64
+        0,
+        208
       ],
       "id": "99c6da49-1335-4449-af0a-818ba290357d",
       "name": "Mensaje de ERROR: nodo extracción de nombre",
@@ -195,8 +169,8 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        368,
-        -224
+        400,
+        -112
       ],
       "id": "39e85e96-1a69-40fe-9b66-ac9d6b05aeaf",
       "name": "JS Scraping",
@@ -224,8 +198,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.4,
       "position": [
-        592,
-        -400
+        1088,
+        -128
       ],
       "id": "944b8543-1d28-415b-944f-f892ce00692d",
       "name": "Headless Browser Runner",
@@ -242,7 +216,7 @@
       "typeVersion": 2.2,
       "position": [
         608,
-        -64
+        208
       ],
       "id": "cbb30fa6-27dc-442d-ae97-700d52bea715",
       "name": "Mensaje ERROR: Ejecución de scraping",
@@ -256,36 +230,15 @@
     },
     {
       "parameters": {
-        "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.postgres",
-      "typeVersion": 2.6,
-      "position": [
-        1040,
-        -416
-      ],
-      "id": "e865aad5-11d6-42b7-816c-40c09b8e6d88",
-      "name": "SQL logs del proceso de scraping",
-      "credentials": {
-        "postgres": {
-          "id": "aaW6G67VHp6GyFp5",
-          "name": "Postgres account"
-        }
-      }
-    },
-    {
-      "parameters": {
         "content": "## Proceso final  entregra de la solicitud\n\n1. entregra al correo  el documento solcitdo\n2. manejo por última vez los logs del procesos final",
-        "height": 736,
-        "width": 640,
+        "height": 1296,
+        "width": 736,
         "color": 4
       },
       "type": "n8n-nodes-base.stickyNote",
       "typeVersion": 1,
       "position": [
-        1248,
+        2336,
         -608
       ],
       "id": "638df699-1bcd-4a97-b1c4-958872cb3553",
@@ -301,8 +254,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        1088,
-        -144
+        1904,
+        208
       ],
       "id": "95ca29bf-720a-4659-b712-c3bfcdc717d7",
       "name": "Mens. ERROR Gmial: generacion del CSV  o DOC",
@@ -332,36 +285,12 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        1360,
-        -416
+        2416,
+        -288
       ],
       "id": "fbe1b75c-8dba-44e0-8ff7-85beea3934d2",
       "name": "Mens. Gmail: del arcivo PRUBA",
       "webhookId": "10b0782c-9ef3-493c-8d10-428833270be2",
-      "credentials": {
-        "gmailOAuth2": {
-          "id": "9kk6YJLQskh8kToY",
-          "name": "Gmail account"
-        }
-      },
-      "onError": "continueErrorOutput"
-    },
-    {
-      "parameters": {
-        "sendTo": "jhrey@tcc.com.co",
-        "subject": "ERROR Desaing file",
-        "message": "❌ This file could not be loaded properly.",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.gmail",
-      "typeVersion": 2.2,
-      "position": [
-        1360,
-        -128
-      ],
-      "id": "ccacc843-ae52-4dee-83d5-d84f5e02baf7",
-      "name": "Mens. Gmail: del arcivo PRUBA TCC",
-      "webhookId": "e7b6d489-d9b2-4e55-a1c4-c46f49a3b71e",
       "credentials": {
         "gmailOAuth2": {
           "id": "9kk6YJLQskh8kToY",
@@ -380,8 +309,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        1568,
-        -336
+        2768,
+        -96
       ],
       "id": "1c89898e-814a-4527-acd6-d20ca9330edc",
       "name": "Mens. ERROR Gmial: envio Doc. al gmail",
@@ -403,8 +332,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        1568,
-        -48
+        2784,
+        480
       ],
       "id": "ee34c814-c527-4368-aaad-c28a7263a5e2",
       "name": "Mens. ERROR Gmial: envio Doc. al gmail1",
@@ -418,27 +347,6 @@
     },
     {
       "parameters": {
-        "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
-        "options": {}
-      },
-      "type": "n8n-nodes-base.postgres",
-      "typeVersion": 2.6,
-      "position": [
-        1728,
-        -496
-      ],
-      "id": "ce8aa692-0b41-429d-bfed-2a0e4781203d",
-      "name": "SQL logs del proceso salida del documeto al gmail",
-      "credentials": {
-        "postgres": {
-          "id": "aaW6G67VHp6GyFp5",
-          "name": "Postgres account"
-        }
-      }
-    },
-    {
-      "parameters": {
         "sendTo": "juanprueba0511@gmail.com",
         "subject": "ERROR of integration ",
         "message": "❌ Chrome/Chromiun in the node  headless",
@@ -447,8 +355,8 @@
       "type": "n8n-nodes-base.gmail",
       "typeVersion": 2.2,
       "position": [
-        864,
-        -64
+        1344,
+        208
       ],
       "id": "83f2e8b9-c164-43bf-8cd2-2b3b449c4916",
       "name": "Mensaje ERROR Gmial: Headless Browser Runner",
@@ -467,12 +375,418 @@
       "type": "n8n-nodes-base.code",
       "typeVersion": 2,
       "position": [
-        864,
-        -224
+        1728,
+        -144
       ],
       "id": "e358a69b-b24d-4f05-998f-764233c95ff1",
       "name": "Tranformar  docuento Binario  si CSV  a doc con HTML o si viene DOC mandarlo",
       "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "sendTo": "sladinog@tcc.com.co",
+        "subject": "=[RPA] Detalle Proceso - {{ $('Captura del mensaje consulta_nombre').item.json.snippet }} - {{ $json.fechaHora }}",
+        "message": "=Adjunto encontrarás los procesos judiciales de {{ $json.nombre }}",
+        "options": {
+          "attachmentsUi": {
+            "attachmentsBinary": [
+              {
+                "property": "attachment"
+              }
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        2480,
+        224
+      ],
+      "id": "92426beb-1147-4e41-a73f-508ae791e543",
+      "name": "Mens. Gmail: del arcivo PRUBA1",
+      "webhookId": "10b0782c-9ef3-493c-8d10-428833270be2",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "9kk6YJLQskh8kToY",
+          "name": "Gmail account"
+        }
+      },
+      "onError": "continueErrorOutput"
+    },
+    {
+      "parameters": {
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"NODO PROCEZAMIENTO SCRAPING\",\n  error_stack: $json.error?.stack || null\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        592,
+        -32
+      ],
+      "id": "d988b9d7-d5ee-4530-8514-8ac0e7ce548d",
+      "name": "logs"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        784,
+        -32
+      ],
+      "id": "90953636-a2b5-4e0f-9f27-0bb0c5e0423f",
+      "name": "SQL guardar logs de Incio1",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"NODO INTEGRACION HTTP\",\n  error_stack: $json.error?.stack || null\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1328,
+        -32
+      ],
+      "id": "a1f5639f-452d-4720-a17c-8b91ae09eeab",
+      "name": "logs3"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        1504,
+        -32
+      ],
+      "id": "1f6b2d50-67f1-4537-a47e-decd21498154",
+      "name": "SQL guardar logs de Incio2",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"PROCESO NODO JS TRAFORMACIO DEL ACHIVO\",\n  error_stack: $json.error?.stack || null\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1968,
+        48
+      ],
+      "id": "191467dc-5113-434e-8ce2-523818538089",
+      "name": "logs4"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        2160,
+        48
+      ],
+      "id": "671112ab-d1ac-4010-8cc5-d20a0a270f08",
+      "name": "SQL guardar logs de Incio3",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"FINALIZACION DEL PROCESO NODO GMAIL\",\n  error_stack: $json.error?.stack || null\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2688,
+        -272
+      ],
+      "id": "4513b998-ad19-4a0b-a9f6-bc026fb7ef2f",
+      "name": "logs5"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        2896,
+        -272
+      ],
+      "id": "81372af6-21f1-4ef1-8506-03d44c937118",
+      "name": "SQL guardar logs de Incio4",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"FINALIZACION DEL PROCESO NODO GMAIL\",\n  error_stack: $json.error?.stack || null\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2688,
+        -464
+      ],
+      "id": "6eed1863-9c58-4ad7-8266-9931499d244b",
+      "name": "logs6"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        2848,
+        -464
+      ],
+      "id": "3d5ee8f3-f36a-49db-8f49-5bcb6ca44849",
+      "name": "SQL guardar logs de Incio5",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"FINALIZACION DEL PROCESO NODO GMAIL\",\n  error_stack: $json.error?.stack || null\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2688,
+        112
+      ],
+      "id": "b76ea5a5-7f93-4e85-9c04-fde410771b50",
+      "name": "logs7"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        2864,
+        112
+      ],
+      "id": "287ce335-c8e7-454e-990b-6003a24b62b0",
+      "name": "SQL guardar logs de Incio6",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"FINALIZACION DEL PROCESO NODO GMAIL\",\n  error_stack: $json.error?.stack || null\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2704,
+        304
+      ],
+      "id": "5e087006-e5e9-4490-9bc7-84da7f579c94",
+      "name": "logs8"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        2880,
+        304
+      ],
+      "id": "b6b00131-2411-431d-8304-a307c5a4f9ad",
+      "name": "SQL guardar logs de Incio7",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"PROCESO NODO JS TRAFORMACIO DEL ACHIVO\",\n  error_stack: $json.error?.stack || null\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1936,
+        -368
+      ],
+      "id": "db87008a-63c5-4996-a1ce-d34a54bd9c27",
+      "name": "logs9"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        2128,
+        -368
+      ],
+      "id": "c799b12c-7ccd-401e-91ea-e6a6841ad033",
+      "name": "SQL guardar logs de Incio8",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"NODO INTEGRACION HTTP\",\n  error_stack: $json.error?.stack || null\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1312,
+        -256
+      ],
+      "id": "c8145171-e918-4a49-9fd4-6d6b135b2b0c",
+      "name": "logs10"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        1520,
+        -256
+      ],
+      "id": "d597d4bd-d140-4e01-9b44-ea8b28308222",
+      "name": "SQL guardar logs de Incio9",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"NODO PROCEZAMIENTO SCRAPING\",\n  error_stack: $json.error?.stack || null\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        592,
+        -240
+      ],
+      "id": "a179d8aa-26b8-4a05-9be1-deaf33e9faae",
+      "name": "logs11"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        784,
+        -240
+      ],
+      "id": "3187054e-fbf5-4441-afec-40b840de2978",
+      "name": "SQL guardar logs de Incio10",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const log = {\n  timestamp: new Date().toISOString(),\n  step: \"Consulta Judicial\",\n  status: $json.error ? \"error\" : \"success\",\n  message: $json.error ? \"Falló la consulta\" : \"Consulta ejecutada\",\n  nombre: $json.nombre || \"NODO DE INICIO PROCESAMIENTO INICIAL DEL GMAIL Y TIGGER\",\n  error_stack: $json.error?.stack || null\n};\n\nreturn [{\n  json: { log }\n}];\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        0,
+        -224
+      ],
+      "id": "bb97d5b9-8237-4881-9773-2804b6e35a49",
+      "name": "logs2"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.6,
+      "position": [
+        176,
+        -224
+      ],
+      "id": "f215ae12-c687-454f-80ea-88e6c682f614",
+      "name": "SQL guardar logs de Incio11",
+      "credentials": {
+        "postgres": {
+          "id": "aaW6G67VHp6GyFp5",
+          "name": "Postgres account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -482,22 +796,6 @@
         [
           {
             "node": "Captura del mensaje consulta_nombre",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "logs1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "logs": {
-      "main": [
-        [
-          {
-            "node": "SQL logs del proceso de scraping",
             "type": "main",
             "index": 0
           }
@@ -515,27 +813,11 @@
         ]
       ]
     },
-    "logs2": {
-      "main": [
-        [
-          {
-            "node": "SQL logs del proceso salida del documeto al gmail",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "Ejecución programada  6:35 AM de todos los diás": {
       "main": [
         [
           {
             "node": "Captura del mensaje consulta_nombre",
-            "type": "main",
-            "index": 0
-          },
-          {
-            "node": "logs1",
             "type": "main",
             "index": 0
           }
@@ -549,11 +831,21 @@
             "node": "JS Scraping",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "logs2",
+            "type": "main",
+            "index": 0
           }
         ],
         [
           {
             "node": "Mensaje de ERROR: nodo extracción de nombre",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "logs1",
             "type": "main",
             "index": 0
           }
@@ -567,11 +859,21 @@
             "node": "Headless Browser Runner",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "logs11",
+            "type": "main",
+            "index": 0
           }
         ],
         [
           {
             "node": "Mensaje ERROR: Ejecución de scraping",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "logs",
             "type": "main",
             "index": 0
           }
@@ -587,7 +889,7 @@
             "index": 0
           },
           {
-            "node": "logs",
+            "node": "logs10",
             "type": "main",
             "index": 0
           }
@@ -597,20 +899,20 @@
             "node": "Mensaje ERROR Gmial: Headless Browser Runner",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "logs3",
+            "type": "main",
+            "index": 0
           }
         ]
-      ]
-    },
-    "SQL logs del proceso de scraping": {
-      "main": [
-        []
       ]
     },
     "Mens. Gmail: del arcivo PRUBA": {
       "main": [
         [
           {
-            "node": "logs2",
+            "node": "logs6",
             "type": "main",
             "index": 0
           }
@@ -620,16 +922,9 @@
             "node": "Mens. ERROR Gmial: envio Doc. al gmail",
             "type": "main",
             "index": 0
-          }
-        ]
-      ]
-    },
-    "Mens. Gmail: del arcivo PRUBA TCC": {
-      "main": [
-        [],
-        [
+          },
           {
-            "node": "Mens. ERROR Gmial: envio Doc. al gmail1",
+            "node": "logs5",
             "type": "main",
             "index": 0
           }
@@ -643,6 +938,16 @@
             "node": "Mens. Gmail: del arcivo PRUBA",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "logs9",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Mens. Gmail: del arcivo PRUBA1",
+            "type": "main",
+            "index": 0
           }
         ],
         [
@@ -650,17 +955,166 @@
             "node": "Mens. ERROR Gmial: generacion del CSV  o DOC",
             "type": "main",
             "index": 0
+          },
+          {
+            "node": "logs4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Mens. Gmail: del arcivo PRUBA1": {
+      "main": [
+        [
+          {
+            "node": "logs7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Mens. ERROR Gmial: envio Doc. al gmail1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "logs8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs": {
+      "main": [
+        [
+          {
+            "node": "SQL guardar logs de Incio1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs3": {
+      "main": [
+        [
+          {
+            "node": "SQL guardar logs de Incio2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs4": {
+      "main": [
+        [
+          {
+            "node": "SQL guardar logs de Incio3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs5": {
+      "main": [
+        [
+          {
+            "node": "SQL guardar logs de Incio4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs6": {
+      "main": [
+        [
+          {
+            "node": "SQL guardar logs de Incio5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs7": {
+      "main": [
+        [
+          {
+            "node": "SQL guardar logs de Incio6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs8": {
+      "main": [
+        [
+          {
+            "node": "SQL guardar logs de Incio7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs9": {
+      "main": [
+        [
+          {
+            "node": "SQL guardar logs de Incio8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs10": {
+      "main": [
+        [
+          {
+            "node": "SQL guardar logs de Incio9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs11": {
+      "main": [
+        [
+          {
+            "node": "SQL guardar logs de Incio10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "logs2": {
+      "main": [
+        [
+          {
+            "node": "SQL guardar logs de Incio11",
+            "type": "main",
+            "index": 0
           }
         ]
       ]
     }
   },
-  "active": false,
+  "active": true,
   "settings": {
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "2288156e-e9fe-4a2f-803e-999eaa7e6585",
+  "versionId": "9b32731c-c2dc-4068-b765-57cbeea613ba",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "ffda0daa83fa6967b47e989b38cc1cf3f2e3cec3f1b4e7655be7d05155bf5843"

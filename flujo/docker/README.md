@@ -125,6 +125,16 @@ docker ps
    - password: `n8n123`
    - db: `logs_db`
 
+## Ingreso al a base de datos a través de la consola de Docker o en su defecto poweeshelltablas
+docker exec -it postgres psql -U n8n -d logs_db
+
+## ver tablas
+\dt
+
+## Crear la tabla de logs en PostgreSQL
+SELECT * FROM logs;
+
+
 ## Crear la tabla de logs en PostgreSQL
 
 Ejecutar el siguiente SQL **una sola vez** en la base de datos:
