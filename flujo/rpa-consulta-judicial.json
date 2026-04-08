@@ -94,7 +94,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "query": "INSERT INTO logs (timestamp, step, status, message, nombre, error_stack)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{ $json.log.message }}',\n  '{{$json.log.nombre}}',\n  '{{$json.log.error_stack}}'\n);",
         "options": {}
       },
       "type": "n8n-nodes-base.postgres",
@@ -430,7 +430,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "query": "INSERT INTO logs (timestamp, step, status, message, nombre, error_stack)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{ $json.log.message }}',\n  '{{$json.log.nombre}}',\n  '{{$json.log.error_stack}}'\n);",
         "options": {}
       },
       "type": "n8n-nodes-base.postgres",
@@ -464,7 +464,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "query": "INSERT INTO logs (timestamp, step, status, message, nombre, error_stack)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{ $json.log.message }}',\n  '{{$json.log.nombre}}',\n  '{{$json.log.error_stack}}'\n);",
         "options": {}
       },
       "type": "n8n-nodes-base.postgres",
@@ -498,7 +498,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "query": "INSERT INTO logs (timestamp, step, status, message, nombre, error_stack)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{ $json.log.message }}',\n  '{{$json.log.nombre}}',\n  '{{$json.log.error_stack}}'\n);",
         "options": {}
       },
       "type": "n8n-nodes-base.postgres",
@@ -532,7 +532,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "query": "INSERT INTO logs (timestamp, step, status, message, nombre, error_stack)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{ $json.log.message }}',\n  '{{$json.log.nombre}}',\n  '{{$json.log.error_stack}}'\n);",
         "options": {}
       },
       "type": "n8n-nodes-base.postgres",
@@ -566,7 +566,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "query": "INSERT INTO logs (timestamp, step, status, message, nombre, error_stack)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{ $json.log.message }}',\n  '{{$json.log.nombre}}',\n  '{{$json.log.error_stack}}'\n);",
         "options": {}
       },
       "type": "n8n-nodes-base.postgres",
@@ -600,7 +600,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "query": "INSERT INTO logs (timestamp, step, status, message, nombre, error_stack)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{ $json.log.message }}',\n  '{{$json.log.nombre}}',\n  '{{$json.log.error_stack}}'\n);",
         "options": {}
       },
       "type": "n8n-nodes-base.postgres",
@@ -634,7 +634,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "query": "INSERT INTO logs (timestamp, step, status, message, nombre, error_stack)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{ $json.log.message }}',\n  '{{$json.log.nombre}}',\n  '{{$json.log.error_stack}}'\n);",
         "options": {}
       },
       "type": "n8n-nodes-base.postgres",
@@ -668,7 +668,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "query": "INSERT INTO logs (timestamp, step, status, message, nombre, error_stack)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{ $json.log.message }}',\n  '{{$json.log.nombre}}',\n  '{{$json.log.error_stack}}'\n);",
         "options": {}
       },
       "type": "n8n-nodes-base.postgres",
@@ -702,7 +702,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "query": "INSERT INTO logs (timestamp, step, status, message, nombre, error_stack)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{ $json.log.message }}',\n  '{{$json.log.nombre}}',\n  '{{$json.log.error_stack}}'\n);",
         "options": {}
       },
       "type": "n8n-nodes-base.postgres",
@@ -736,7 +736,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "query": "INSERT INTO logs (timestamp, step, status, message, nombre, error_stack)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{ $json.log.message }}',\n  '{{$json.log.nombre}}',\n  '{{$json.log.error_stack}}'\n);",
         "options": {}
       },
       "type": "n8n-nodes-base.postgres",
@@ -770,7 +770,7 @@
     {
       "parameters": {
         "operation": "executeQuery",
-        "query": "INSERT INTO logs (timestamp, step, status, message)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{$json.log.message}}'\n);",
+        "query": "INSERT INTO logs (timestamp, step, status, message, nombre, error_stack)\nVALUES (\n  '{{$json.log.timestamp}}',\n  '{{$json.log.step}}',\n  '{{$json.log.status}}',\n  '{{ $json.log.message }}',\n  '{{$json.log.nombre}}',\n  '{{$json.log.error_stack}}'\n);",
         "options": {}
       },
       "type": "n8n-nodes-base.postgres",
@@ -943,11 +943,6 @@
             "node": "logs9",
             "type": "main",
             "index": 0
-          },
-          {
-            "node": "Mens. Gmail: del arcivo PRUBA1",
-            "type": "main",
-            "index": 0
           }
         ],
         [
@@ -1114,7 +1109,7 @@
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "9b32731c-c2dc-4068-b765-57cbeea613ba",
+  "versionId": "0cabcfa6-e249-432a-944c-17c74577f480",
   "meta": {
     "templateCredsSetupCompleted": true,
     "instanceId": "ffda0daa83fa6967b47e989b38cc1cf3f2e3cec3f1b4e7655be7d05155bf5843"
